@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./style.css";
 
 const TaskManager = () => {
   const [task, setTask] = useState('');
@@ -22,16 +23,16 @@ const TaskManager = () => {
   };
 
   return (
-    <div>
+    <div className='container'>
       <h1>Task Manager</h1>
-      <div>
-        <input type="text" value={task} onChange={handleTaskChange} />
+      <div className='add-task'>
+        <input type="text" placeholder='task...' value={task} onChange={handleTaskChange} />
         <button onClick={handleAddTask}>Add Task</button>
       </div>
       <ul>
         {taskList.map((task, index) => (
           <li key={index}>
-            {task}
+            <span>{task}</span>
             <button onClick={() => handleDeleteTask(index)}>Delete</button>
           </li>
         ))}

@@ -48,10 +48,10 @@ class TicTacToeGame extends Component {
       }
     }
 
-    const full = board.find(b => b === null);
-    if(full === undefined){
-      this.setState({ winner: "Tie" });
-    }
+    // const full = board.find(b => b === null);
+    // if(full === undefined && this.state.winner === null){
+    //   this.setState({ winner: "Tie" });
+    // }
   }
 
   resetGame() {

@@ -1,0 +1,10 @@
+button {
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+
+.reset {
+    background-color: red;
+    color: white;
+}

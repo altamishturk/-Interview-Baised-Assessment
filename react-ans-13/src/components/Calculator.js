@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './style.css';
 
 const CalculatorApp = () => {
   const [result, setResult] = useState('');
@@ -42,7 +43,7 @@ const CalculatorApp = () => {
           <button onClick={() => handleClick('.')}>.</button>
           <button onClick={calculate}>=</button>
           <button onClick={() => handleClick('+')}>+</button>
-          <button onClick={clear}>Clear</button>
+          <button className='clear' onClick={clear}>C</button>
         </div>
       </div>
     </div>

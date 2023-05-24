@@ -36,3 +36,52 @@
     transform: rotate(360deg);
   }
 }
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+#add-contact-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#add-contact-form > * {
+  padding: 5px 10px;
+}
+
+#contact-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-card h3,
+.contact-card p {
+  margin: 0;
+  text-align: start;
+}
+
+.contact-card button {
+  margin-top: 20px;
+  border: none;
+  background-color: red;
+  color: white;
+  padding: 5px;
+}

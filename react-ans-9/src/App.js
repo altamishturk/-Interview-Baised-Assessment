@@ -1,4 +1,5 @@
 import React, { useState, useContext, createContext } from 'react';
+import "./App.css";
 
 // Create a new context
 const ContactContext = createContext();
@@ -36,8 +37,8 @@ const ContactList = () => {
     <div id="contact-list">
       {contacts.map(contact => (
         <div className="contact-card" key={contact.id}>
-          <h3>{contact.name}</h3>
-          <p>{contact.email}</p>
+          <h3>Name: {contact.name}</h3>
+          <p>Email: {contact.email}</p>
           <button onClick={() => deleteContact(contact.id)}>Delete</button>
         </div>
       ))}
@@ -71,9 +72,11 @@ const AddContactForm = () => {
 const App = () => {
   return (
     <ContactProvider>
-      <h1>Contact Management</h1>
-      <ContactList />
-      <AddContactForm />
+      <div className="container">
+        <h1>Contact Management</h1>
+        <AddContactForm />
+        <ContactList />
+      </div>
     </ContactProvider>
   );
 };

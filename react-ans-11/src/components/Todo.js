@@ -1,4 +1,5 @@
 import React, { useReducer, useState } from 'react';
+import "./style.css";
 
 // Reducer function to manage the state
 const reducer = (state, action) => {
@@ -46,22 +47,27 @@ const TodoApp = () => {
   return (
     <div>
       <h1>Todo App</h1>
-      <form onSubmit={handleAddTodo}>
-        <input type="text" value={newTodo} onChange={handleInputChange} />
+      <form className='add-todo' onSubmit={handleAddTodo}>
+        <input placeholder='Add..' type="text" value={newTodo} onChange={handleInputChange} />
         <button type="submit">Add Todo</button>
       </form>
-      <ul>
+      <div className='todo-container'>
         {todos.map(todo => (
-          <li
+          <div
+            className='todo'
             key={todo.id}
-            style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
-            onClick={() => handleToggleTodo(todo.id)}
           >
-            {todo.text}
-            <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
-          </li>
+            <div style={{opacity:todo.completed ? .2 : 1 }}>{todo.text}</div>
+            <div className='buttons'>
+                <button onClick={() => handleToggleTodo(todo.id)}>{todo.completed? "Un-Complete":"Complete"}</button>
+                {
+                  !todo.completed &&  <button style={{opacity:todo.completed ? .2 : 1 }} onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
+                }
+               
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
