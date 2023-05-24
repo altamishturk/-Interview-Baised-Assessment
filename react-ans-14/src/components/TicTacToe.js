@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./style.css";
 
 class TicTacToeGame extends Component {
   constructor(props) {
@@ -45,6 +46,11 @@ class TicTacToeGame extends Component {
         this.setState({ winner: player });
         break;
       }
+    }
+
+    const full = board.find(b => b === null);
+    if(full === undefined){
+      this.setState({ winner: "Tie" });
     }
   }
 

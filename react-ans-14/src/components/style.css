@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    margin: 50px 0;
+}
+
+h2 {
+    margin: 30px 0;
+}
+
+.board {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    border: 1px solid;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+
+button {
+    background-color: rgb(243, 59, 59);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+}
