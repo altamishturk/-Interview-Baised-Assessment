@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Periodic Table</title>
+    <style>
+
+        body {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        td > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 11px;
+            border: 1px solid black;
+            width: 40px;
+            height: 40px;
+        }
+
+
+        .gap {
+            border: none;
+            width: 10px;
+            height: 10px;
+        }
+
+        .bg-red {
+            background-color: rgb(245, 134, 134);
+        }
+
+        .bg-blue {
+            background-color: rgb(125, 125, 254);
+        }
+
+        .bg-yellow {
+            background-color: rgb(245, 245, 146);
+        }
+
+        .bg-green {
+            background-color: rgb(145, 239, 145);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table >
+            <tbody>
+                <tr>
+                    <td><div class="bg-red"><span>1</span><span>H</span></div></td>
+                    <td class="gap"></td>
+                    <td colspan="16"></td>
+                    <td><div class="bg-red"><span>2</span><span>He</span></div></td>
+                </tr>
+                <tr>
+                    <td><div class="bg-red"><span>3</span><span>Li</span></div></td>
+                    <td><div class="bg-red"><span>4</span><span>Be</span></div></td>
+                    <td class="gap"></td>
+                    <td colspan="10"></td>
+                    <td><div class="bg-yellow class="bg-green""><span>5</span><span>B</span></div></td>
+                    <td><div class="bg-yellow class="bg-green""><span>6</span><span>C</span></div></td>
+                    <td><div class="bg-yellow class="bg-green""><span>7</span><span>N</span></div></td>
+                    <td><div class="bg-yellow class="bg-green""><span>8</span><span>O</span></div></td>
+                    <td><div class="bg-yellow class="bg-green""><span>9</span><span>F</span></div></td>
+                    <td><div class="bg-yellow class="bg-green""><span>10</span><span>Ne</span></div></td>
+                </tr>
+                <tr>
+                    <td><div class="bg-red"><span>11</span><span>Na</span></div></td>
+                    <td><div class="bg-red"><span>12</span><span>Be</span></div></td>
+                    <td class="gap"></td>
+                    <td colspan="10"></td>
+                    <td><div class="bg-yellow"><span>13</span><span>Al</span></div></td>
+                    <td><div class="bg-yellow"><span>14</span><span>Si</span></div></td>
+                    <td><div class="bg-yellow"><span>15</span><span>P</span></div></td>
+                    <td><div class="bg-yellow"><span>16</span><span>S</span></div></td>
+                    <td><div class="bg-yellow"><span>17</span><span>CI</span></div></td>
+                    <td><div class="bg-yellow"><span>18</span><span>Ar</span></div></td>
+                </tr>
+                <tr>
+                    <td><div class="bg-red"><span>19<span></span></span>K</div></td>
+                    <td><div class="bg-red"><span>20<span></span></span>Ca</div></td>
+                    <td class="gap"></td>
+                    <td><div class="bg-blue"><span>21<span></span></span>Sc</div></td>
+                    <td><div class="bg-blue"><span>22<span></span></span>Ti</div></td>
+                    <td><div class="bg-blue"><span>23<span></span></span>V</div></td>
+                    <td><div class="bg-blue"><span>24<span></span></span>Cr</div></td>
+                    <td><div class="bg-blue"><span>25<span></span></span>Mn</div></td>
+                    <td><div class="bg-blue"><span>26<span></span></span>Fe</div></td>
+                    <td><div class="bg-blue"><span>27<span></span></span>Co</div></td>
+                    <td><div class="bg-blue"><span>28<span></span></span>Ni</div></td>
+                    <td><div class="bg-blue"><span>29<span></span></span>Cu</div></td>
+                    <td><div class="bg-blue"><span>30<span></span></span>Zn</div></td>
+                    <td><div class="bg-yellow"><span>31<span></span></span>Ga</div></td>
+                    <td><div class="bg-yellow"><span>32<span></span></span>Ge</div></td>
+                    <td><div class="bg-yellow"><span>33<span></span></span>As</div></td>
+                    <td><div class="bg-yellow"><span>34<span></span></span>Se</div></td>
+                    <td><div class="bg-yellow"><span>35<span></span></span>Br</div></td>
+                    <td><div class="bg-yellow"><span>36<span></span></span>Kr</div></td>
+                </tr>
+                <tr>
+                    <td><div class="bg-red"><span>37</span><span>Rb</span></div></td>
+                    <td><div class="bg-red"><span>38</span><span>Sr</span></div></td>
+                    <td class="gap"></td>
+                    <td><div class="bg-blue"><span>39</span><span>Y</span></div></td>
+                    <td><div class="bg-blue"><span>40</span><span>Zr</span></div></td>
+                    <td><div class="bg-blue"><span>41</span><span>Nb</span></div></td>
+                    <td><div class="bg-blue"><span>42</span><span>Mo</span></div></td>
+                    <td><div class="bg-blue"><span>43</span><span>Tc</span></div></td>
+                    <td><div class="bg-blue"><span>44</span><span>Ru</span></div></td>
+                    <td><div class="bg-blue"><span>45</span><span>Rh</span></div></td>
+                    <td><div class="bg-blue"><span>46</span><span>Pd</span></div></td>
+                    <td><div class="bg-blue"><span>47</span><span>Ac</span></div></td>
+                    <td><div class="bg-blue"><span>48</span><span>Cd</span></div></td>
+                    <td><div class="bg-yellow"><span>49</span><span>In</span></div></td>
+                    <td><div class="bg-yellow"><span>50</span><span>Sn</span></div></td>
+                    <td><div class="bg-yellow"><span>51</span><span>Sb</span></div></td>
+                    <td><div class="bg-yellow"><span>52</span><span>Te</span></div></td>
+                    <td><div class="bg-yellow"><span>53</span><span>I</span></div></td>
+                    <td><div class="bg-yellow"><span>54</span><span>Xe</span></div></td>
+                </tr>
+                <tr>
+                    <td><div class="bg-red"><span>55</span><span>Cs</span></div></td>
+                    <td><div class="bg-red"><span>56</span><span>Ba</span></div></td>
+                    <td class="gap"></td>
+                    <td><div class="bg-blue"><span>71</span><span>Lu</span></div></td>
+                    <td><div class="bg-blue"><span>72</span><span>Hf</span></div></td>
+                    <td><div class="bg-blue"><span>73</span><span>Ta</span></div></td>
+                    <td><div class="bg-blue"><span>74</span><span>W</span></div></td>
+                    <td><div class="bg-blue"><span>75</span><span>Re</span></div></td>
+                    <td><div class="bg-blue"><span>76</span><span>Os</span></div></td>
+                    <td><div class="bg-blue"><span>77</span><span>Ir</span></div></td>
+                    <td><div class="bg-blue"><span>78</span><span>Pt</span></div></td>
+                    <td><div class="bg-blue"><span>79</span><span>Au</span></div></td>
+                    <td><div class="bg-blue"><span>80</span><span>Hg</span></div></td>
+                    <td><div class="bg-yellow"><span>81</span><span>Tl</span></div></td>
+                    <td><div class="bg-yellow"><span>82</span><span>Pb</span></div></td>
+                    <td><div class="bg-yellow"><span>83</span><span>Bi</span></div></td>
+                    <td><div class="bg-yellow"><span>84</span><span>Po</span></div></td>
+                    <td><div class="bg-yellow"><span>85</span><span>At</span></div></td>
+                    <td><div class="bg-yellow"><span>86</span><span>Rn</span></div></td>
+                </tr>
+                <tr>
+                    <td><div class="bg-red"><span>87</span><span>Fr</span></div></td>
+                    <td><div class="bg-red"><span>88</span><span>Ra</span></div></td>
+                    <td class="gap"></td>
+                    <td><div class="bg-blue"><span>103</span><span>Lr</span></div></td>
+                    <td><div class="bg-blue"><span>104</span><span>Rf</span></div></td>
+                    <td><div class="bg-blue"><span>105</span><span>Db</span></div></td>
+                    <td><div class="bg-blue"><span>106</span><span>Sg</span></div></td>
+                    <td><div class="bg-blue"><span>107</span><span>Bh</span></div></td>
+                    <td><div class="bg-blue"><span>108</span><span>Hs</span></div></td>
+                    <td><div class="bg-blue"><span>109</span><span>Mt</span></div></td>
+                    <td><div class="bg-blue"><span>110</span><span>Ds</span></div></td>
+                    <td><div class="bg-blue"><span>111</span><span>Rg</span></div></td>
+                    <td><div class="bg-blue"><span>112</span><span>Cn</span></div></td>
+                    <td><div class="bg-yellow"><span>113</span><span>Nh</span></div></td>
+                    <td><div class="bg-yellow"><span>114</span><span>Fl</span></div></td>
+                    <td><div class="bg-yellow"><span>115</span><span>Mc</span></div></td>
+                    <td><div class="bg-yellow"><span>116</span><span>Lv</span></div></td>
+                    <td><div class="bg-yellow"><span>117</span><span>Ts</span></div></td>
+                    <td><div class="bg-yellow"><span>118</span><span>Og</span></div></td>
+                </tr>
+                <tr class="gap"></tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="tag"></td>
+                    <td><div class="bg-green"><span>57</span><span>La</span></div></td>
+                    <td><div class="bg-green"><span>58</span><span>Ce</span></div></td>
+                    <td><div class="bg-green"><span>59</span><span>Pr</span></div></td>
+                    <td><div class="bg-green"><span>60</span><span>Nd</span></div></td>
+                    <td><div class="bg-green"><span>61</span><span>Pm</span></div></td>
+                    <td><div class="bg-green"><span>62</span><span>Sm</span></div></td>
+                    <td><div class="bg-green"><span>63</span><span>Eu</span></div></td>
+                    <td><div class="bg-green"><span>64</span><span>Gd</span></div></td>
+                    <td><div class="bg-green"><span>65</span><span>Tb</span></div></td>
+                    <td><div class="bg-green"><span>66</span><span>Dy</span></div></td>
+                    <td><div class="bg-green"><span>67</span><span>Ho</span></div></td>
+                    <td><div class="bg-green"><span>68</span><span>Er</span></div></td>
+                    <td><div class="bg-green"><span>69</span><span>Tm</span></div></td>
+                    <td><div class="bg-green"><span>70</span><span>Yb</span></div></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="gap"></td>
+                    <td><div class="bg-green"><span>89</span><span>Ac</span></div></td>
+                    <td><div class="bg-green"><span>90</span><span>Th</span></div></td>
+                    <td><div class="bg-green"><span>91</span><span>Pa</span></div></td>
+                    <td><div class="bg-green"><span>92</span><span>U</span></div></td>
+                    <td><div class="bg-green"><span>93</span><span>Np</span></div></td>
+                    <td><div class="bg-green"><span>94</span><span>Pu</span></div></td>
+                    <td><div class="bg-green"><span>95</span><span>Am</span></div></td>
+                    <td><div class="bg-green"><span>96</span><span>Cm</span></div></td>
+                    <td><div class="bg-green"><span>97</span><span>Bk</span></div></td>
+                    <td><div class="bg-green"><span>98</span><span>Cf</span></div></td>
+                    <td><div class="bg-green"><span>99</span><span>Es</span></div></td>
+                    <td><div class="bg-green"><span>100</span><span>Fm</span></div></td>
+                    <td><div class="bg-green"><span>101</span><span>Md</span></div></td>
+                    <td><div class="bg-green"><span>102</span><span>No</span></div></td>
+                    <td colspan="2"></td> 
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

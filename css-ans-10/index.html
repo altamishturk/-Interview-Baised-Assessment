@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(205, 161, 246);
+        margin-bottom: 20px;
+    }
+
+    main {
+        display: flex;
+        min-height: calc(100vh - 100px);
+        gap: 20px;
+    }
+
+    aside {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(251, 225, 191);
+    }
+
+    article {
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
+        background-color: rgb(255, 131, 90);
+    }
+
+    .article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 20px;
+    }
+
+    .article .images {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .article .images img {
+        width: 32%;
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <header>Header</header>
+        <main>
+            <aside>Aside</aside>
+            <article>
+                
+                <div class="article">
+                    <p>article</p>
+                    <div class="images">
+                        <img src="./1.jpg" alt="a">
+                        <img src="./1.jpg" alt="a">
+                        <img src="./1.jpg" alt="a">
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+</body>
+</html>
