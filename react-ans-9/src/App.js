@@ -1,83 +1,26 @@
-import React, { useState, useContext, createContext } from 'react';
+import React from 'react';
 import "./App.css";
+import AddContactForm from "./components/AddContactForm";
+import ContactList from "./components/ContactList";
+import { useContactContext } from './components/context';
+import {darkTheme,lightTheme} from "./constant";
 
-// Create a new context
-const ContactContext = createContext();
 
-// Custom Hook to access the ContactContext
-const useContactContext = () => useContext(ContactContext);
-
-// ContactProvider component to provide contact data to child components
-const ContactProvider = ({ children }) => {
-  const [contacts, setContacts] = useState([]);
-
-  // Function to add a new contact
-  const addContact = (name, email) => {
-    const newContact = { id: Date.now(), name, email };
-    setContacts(prevContacts => [...prevContacts, newContact]);
-  };
-
-  // Function to delete a contact
-  const deleteContact = (id) => {
-    setContacts(prevContacts => prevContacts.filter(contact => contact.id !== id));
-  };
-
-  return (
-    <ContactContext.Provider value={{ contacts, addContact, deleteContact }}>
-      {children}
-    </ContactContext.Provider>
-  );
-};
-
-// ContactList component to display the list of contacts
-const ContactList = () => {
-  const { contacts, deleteContact } = useContactContext();
-
-  return (
-    <div id="contact-list">
-      {contacts.map(contact => (
-        <div className="contact-card" key={contact.id}>
-          <h3>Name: {contact.name}</h3>
-          <p>Email: {contact.email}</p>
-          <button onClick={() => deleteContact(contact.id)}>Delete</button>
-        </div>
-      ))}
-    </div>
-  );
-};
-
-// AddContactForm component to add a new contact
-const AddContactForm = () => {
-  const { addContact } = useContactContext();
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    addContact(name, email);
-    setName('');
-    setEmail('');
-  };
-
-  return (
-    <form id="add-contact-form" onSubmit={handleSubmit}>
-      <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
-      <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-      <button type="submit">Add Contact</button>
-    </form>
-  );
-};
 
 // App component as the root component
 const App = () => {
+  const {themeDark,toggleTheme} = useContactContext();
+  
+
   return (
-    <ContactProvider>
-      <div className="container">
+    <div style={themeDark?darkTheme:lightTheme}>
+      <div style={{minHeight:"100vh"}} className="container">
+        <div className='theme-toggler'><button style={themeDark? {...darkTheme,border: "2px solid white"}:{...lightTheme,border: "2px solid black"}} onClick={()=>toggleTheme()}>{themeDark?"Dark-Theme":"Light-Theme"}</button></div>
         <h1>Contact Management</h1>
-        <AddContactForm />
+        <AddContactForm/>
         <ContactList />
       </div>
-    </ContactProvider>
+    </div>
   );
 };
 
